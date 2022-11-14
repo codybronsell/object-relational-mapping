@@ -7,18 +7,18 @@ const sequelize = require('../config/connection');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
-  console.log('\n----- DATABASE SYNCED -----\n');
+  console.log('\n----- STREET RACING DATABASE SYNCED -----\n');
   await seedCategories();
-  console.log('\n----- CATEGORIES SEEDED -----\n');
+  console.log('\n----- RACING CATEGORIES SEEDED -----\n');
 
   await seedProducts();
-  console.log('\n----- PRODUCTS SEEDED -----\n');
+  console.log('\n----- RACING PRODUCTS SEEDED -----\n');
 
   await seedTags();
-  console.log('\n----- TAGS SEEDED -----\n');
+  console.log('\n----- RACING TAGS SEEDED -----\n');
 
   await seedProductTags();
-  console.log('\n----- PRODUCT TAGS SEEDED -----\n');
+  console.log('\n----- RACING PRODUCT TAGS SEEDED -----\n');
 
   process.exit(0);
 };
